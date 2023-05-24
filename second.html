@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./second.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@200;400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400&display=swap"
+    />
+  </head>
+  <body onload="calcp()">
+    <div class="laptop-2">
+      <div class="imagebig">
+        <img class="image-16-icon" alt="" src="./assets/png/image-16@2x (2).png" />
+
+        <div class="imagebig-child"></div>
+      </div>
+      <div class="header">
+        <div class="header-child"></div>
+        <div class="logo">
+          <img class="image-48-icon" alt="" src="./assets/png/image-24@2x.png" />
+
+          <div class="vikshop">VIKSHOP</div>
+        </div>
+        <div class="links">
+          <a href="index.html"><div class="div">Главная</div></a>
+          <a href="index.html#dogs"><div class="div1">Собакам</div></a>
+          <a href="index.html#cats"><div class="div2">Кошкам</div></a>
+          <a href="#"><div class="div3">Корзина</div></a>
+        </div>
+      </div>
+      <div class="payment">
+        <div class="title">
+          <img class="title-child" id="s1"  alt="" src="./assets/svg/line-11.svg" />
+
+          <div class="div4">Выберите способ оплаты</div>
+        </div>
+        <div class="order-btn" onclick="finish()">
+          <div class="div5">Заказать</div>
+          <div class="rectangle"></div>
+        </div>
+        <label for="payment">
+        <div class="paymentopts">
+          <div class="ellipse-parent">
+            <input name="payment" type="radio" value="cash" checked>Оплата наличными
+          </div>
+          <div class="ellipse-group">
+            <input name="payment" type="radio" value="card">Оплата картой
+          </div>
+        </div>
+        </label>
+      </div>
+      <div class="delivery">
+        <div class="title1">
+          <img class="title-child" alt="" src="./assets/svg/line-11.svg" />
+
+          <div class="div8">Выберите способ получения корма</div>
+        </div>
+        <div class="deliveryopts">
+        <label for="origin">
+          <div class="ellipse-container">
+            <input name="origin" type="radio" value="post">Доставка почтой
+          </div>
+          <div class="frame-div">
+            <input name="origin" type="radio" value="pickup">Самовывоз
+          </div>
+          <div class="ellipse-parent1">
+            <input name="origin" type="radio" value="courier">Доставка курьером
+          </div>
+        </label>
+        </div>
+      </div>
+      <div class="form">
+        <img class="image-48-icon1" alt="" src="./assets/png/image-231@2x.png" />
+
+        <div class="form-child"></div>
+        <div class="div12">
+          Укажите свои данные, чтобы мы могли связаться с Вами!
+        </div>
+        <div class="name">
+          <input placeholder="Имя" id="name" class="rectangle1"></input>
+        </div>
+        <div class="phone">
+          <input placeholder="Телефон" id="phone" class="rectangle1"></input>
+        </div>
+        <div class="address">
+          <input placeholder="Адрес Доставки" id="adres" class="rectangle1"></input>
+        </div>
+      </div>
+      <div class="cart">
+        <div class="goods">
+          <div class="parent">
+            <div class="div16">Ваша <br id="m">корзина</div>
+            <div class="line-div"></div>
+            <div class="frame-child2"></div>
+          </div>
+          <div class="image-25-parent">
+            <img class="image-25-icon" id="productImage1" alt="" src="./assets/png/image-25@2x.png" />
+
+            <select id="productSelect1" class="div17" onchange="updateProduct('productSelect1', 'productImage1', 'productPrice1')">
+              <option value="">Выберите корм</option>
+              <option value="Product A">Лосось</option>
+              <option value="Product B">Курица и рис</option>
+              <option value="Product C">Птица</option>
+            </select>
+            <div class="frame-parent">
+              <div class="ellipse-parent2">
+                <img class="frame-child3" alt="" src="./assets/svg/ellipse-11.svg" />
+            
+                <button class="div18" onclick="qm(1)">-</button>
+              </div>
+              <div class="ellipse-parent3">
+                <img class="frame-child4" alt="" src="./assets/svg/ellipse-11.svg" />
+            
+                <button class="div19" onclick="qp(1)">+</button>
+              </div>
+              <div class="line-parent">
+                <div class="frame-child5"></div>
+                <div class="div20"><span id ="q1">0</span> шт.</div>
+              </div>
+            </div>
+            <div class="rectangle-parent">
+              <div class="rectangle4"></div>
+              <div class="byn" id="productPrice1">0 BYN</div>
+            </div>
+          </div>
+          <div class="image-26-parent">
+            <img class="image-26-icon" alt=""  id="productImage2" src="./assets/png/image-26@2x.png"/>
+
+            <select id="productSelect2" class="div21" onchange="updateProduct('productSelect2', 'productImage2', 'productPrice2')">
+              <option value="">Выберите корм</option>
+              <option value="Product A">Лосось</option>
+              <option value="Product B">Курица и рис</option>
+              <option value="Product C">Птица</option>
+            </select>
+            <div class="frame-group">
+              <div class="ellipse-parent4">
+                <img
+                  class="frame-child4"
+                  alt=""
+                  src="./assets/svg/ellipse-11.svg"
+                />
+
+                <button class="div19" onclick="qp(2)">+</button>
+              </div>
+              <div class="ellipse-parent5">
+                <img
+                  class="frame-child3"
+                  alt=""
+                  src="./assets/svg/ellipse-11.svg"
+                />
+
+                <button class="div18" onclick="qm(2)">-</button>
+              </div>
+              <div class="line-parent">
+                <div class="frame-child5"></div>
+                <div class="div20"> <span id="q2">0</span> шт.</div>
+              </div>
+            </div>
+            <div class="rectangle-group">
+              <div class="rectangle4"></div>
+              <div class="byn1" id="productPrice2">0 BYN</div>
+            </div>
+          </div>
+        </div>
+        <div class="finalprice">
+          <div class="finalprice-child"></div>
+          <div class="group">
+            <div class="div25">Итоговая цена за корм :</div>
+            <div class="byn2"><span id="feedprice">0</span> BYN</div>
+          </div>
+        </div>
+      </div>
+      <div class="thanks">
+        <img class="title-child"alt="" src="./assets/svg/line-11.svg" />
+
+        <div class="c-container">
+          <p class="c">Cпасибо за заказ!</p>
+          <p class="c">К оплате будет: <span id="finprice">0</span>BYN</p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-child"></div>
+        <div class="foot-contacts">
+          <div class="e-mail-elb00320gbstuby">E-mail: elb00320@g.bstu.by</div>
+          <div class="div26">Телефон: +375298298989</div>
+          <div class="div27">Наш адрес: г.Брест, ул. К.Маркса 5</div>
+        </div>
+        <div class="name1">
+          <div class="div28">Титова В.А. ЭЛБ-3</div>
+        </div>
+        <img class="socials-icon" alt="" src="./assets/svg/socials.svg" />
+
+        <div class="logo1">
+          <img class="image-24-icon" alt="" src="./assets/png/image-24@2x.png" />
+
+          <div class="vikshop1">VIKSHOP</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let q1 = document.getElementById("q1");
+    let q2 = document.getElementById("q2");
+    let q1v = parseInt(q1.innerText);
+    let q2v = parseInt(q2.innerText);
+    let feedprice = document.getElementById("feedprice");
+
+      
+
+
+    function qm(number) {
+    let p1 = document.getElementsByClassName("byn")[0];
+    let p2 = document.getElementsByClassName("byn1")[0];
+    let p1v = parseInt(p1.innerText);
+    let p2v = parseInt(p2.innerText);
+      if (number === 1) {
+        if (q1v !== 0) {
+          q1v -= 1;
+          q1.innerText = q1v;
+        }
+      }
+      if (number === 2) {
+        if (q2v !== 0) {
+          q2v -= 1;
+          q2.innerText = q2v;
+        }
+      }
+      feedprice.innerText = p1v * q1v + p2v * q2v;
+    }
+
+    function qp(number) {
+    let p1 = document.getElementsByClassName("byn")[0];
+    let p2 = document.getElementsByClassName("byn1")[0];
+    let p1v = parseInt(p1.innerText);
+    let p2v = parseInt(p2.innerText);
+      if (number === 1) {
+        if (q1v !== 10) {
+          q1v += 1;
+          q1.innerText = q1v;
+        }
+      }
+      if (number === 2) {
+        if (q2v !== 10) {
+          q2v += 1;
+          q2.innerText = q2v;
+        }
+      }
+      feedprice.innerText = p1v * q1v + p2v * q2v;
+    }
+
+    function updateProduct(selectId, imageId, priceId) {
+			var selectElement = document.getElementById(selectId);
+			var imageElement = document.getElementById(imageId);
+			var priceElement = document.getElementById(priceId);
+
+			var selectedProduct = selectElement.value;
+
+			switch(selectedProduct) {
+				case "Product A":
+					imageElement.src = "./assets/png/image-26@2x.png";
+					priceElement.innerText = "60 BYN";
+					break;
+				case "Product B":
+					imageElement.src = "./assets/png/image-27@2x.png";
+					priceElement.innerText = "100 BYN";
+					break;
+				case "Product C":
+					imageElement.src = "./assets/png/image-28@2x.png";
+					priceElement.innerText = "80 BYN";
+					break;
+				default:
+					imageElement.src = "./public/image-26@2x.png";
+					priceElement.innerText = "0 BYN";
+					break;
+      }
+		}
+
+    function updateProduct(selectId, imageId, priceId) {
+			var selectElement = document.getElementById(selectId);
+			var imageElement = document.getElementById(imageId);
+			var priceElement = document.getElementById(priceId);
+
+			var selectedProduct = selectElement.value;
+
+			switch(selectedProduct) {
+				case "Product A":
+					imageElement.src = "./assets/png/image-26@2x.png";
+					priceElement.innerText = "60 BYN";
+					break;
+				case "Product B":
+					imageElement.src = "./assets/png/image-27@2x.png";
+					priceElement.innerText = "100 BYN";
+					break;
+				case "Product C":
+					imageElement.src = "./assets/png/image-28@2x.png";
+					priceElement.innerText = "80 BYN";
+					break;
+				default:
+					imageElement.src = "./public/image-26@2x.png";
+					priceElement.innerText = "0 BYN";
+					break;
+			}
+		}
+    function finish() {
+    var checkboxes = document.getElementsByName("origin");
+    var fprice = document.getElementById("finprice");
+    var name = document.getElementById("name");
+    var phone = document.getElementById("phone");
+    var adres = document.getElementById("adres");
+    
+      var isChecked = false;
+      var checked = 0;
+      var finprice = 0; 
+    var delivery = false;
+      if (name.value.trim() !=="" && phone.value.trim() !=="" && adres.value.trim() !==""){
+        delivery = true;
+      }
+
+      for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked) {
+            isChecked = true;
+            break;
+          }
+          checked = i;
+      }
+
+
+
+      if (!isChecked) {
+        alert("Выберите способ доставки");
+      } else{
+          if(delivery){
+            switch(checked){
+              case 0: 
+              finprice = parseInt(feedprice.innerText) + 5;
+              fprice.innerText = finprice;
+              break;
+              case 1:
+              finprice = parseInt(feedprice.innerText);
+              fprice.innerText = finprice;
+              break;
+              case 2:
+              finprice = parseInt(feedprice.innerText) + 15;
+              fprice.innerText = finprice;
+              break;
+              default: 
+              finprice = 0;
+              fprice.innerText = finprice;
+              break;
+            }
+          } else{
+            alert ("Введите данные для доставки");
+          }
+        }
+      }
+  </script>
+</html>
