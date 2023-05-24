@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-jost: Jost;
+  --font-inter: Inter;
+  --font-jaldi: Jaldi;
+
+  /* font sizes */
+  --font-size-6xl: 25px;
+  --font-size-7xl: 26px;
+  --font-size-8xl: 27px;
+  --font-size-xl: 20px;
+  --font-size-16xl: 35px;
+  --font-size-11xl: 30px;
+  --font-size-4xl: 23px;
+  --font-size-lg: 18px;
+  --font-size-3xs: 10px;
+  --font-size-smi: 13px;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-mini: 15px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-100: #121111;
+  --color-gray-200: #030022;
+  --color-gray-300: #030104;
+  --color-gray-400: rgba(0, 0, 0, 0.07);
+  --color-gray-500: rgba(0, 0, 0, 0.58);
+  --color-lavender-100: #cbe0f3;
+  --color-lavender-200: rgba(203, 224, 243, 0.48);
+  --color-slategray: #587593;
+  --color-purple: #934a9d;
+  --color-thistle: #e1cee4;
+  --color-burlywood: rgba(233, 194, 115, 0.82);
+  --color-palegoldenrod: rgba(188, 215, 148, 0.84);
+  --color-lightskyblue: #91c3e6;
+
+  /* border radiuses */
+  --br-41xl: 60px;
+  --br-xl: 20px;
+}
